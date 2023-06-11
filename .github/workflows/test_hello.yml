@@ -21,7 +21,7 @@ jobs:
           echo "On branch ${{ github.ref }} of repository ${{ github.repository }}."
           
       - name: Check out repository code so it can be run by GitHub
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         
       - run: echo "The ${{ github.repository }} repository has been cloned to the runner."
       
@@ -31,7 +31,7 @@ jobs:
           ls ${{ github.workspace }}
 
       - name: Setup Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v3
         with:
           python-version: ${{ matrix.python-version }}
           
